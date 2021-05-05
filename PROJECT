@@ -1,0 +1,16 @@
+domain: oschina.cn
+layout:
+- go.kubebuilder.io/v3
+projectName: etcd-operator
+repo: github.com/Simonpoon93/etcd-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: oschina.cn
+  group: etcd
+  kind: EtcdCluster
+  path: github.com/Simonpoon93/etcd-operator/api/v1alpha1
+  version: v1alpha1
+version: "3"
