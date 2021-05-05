@@ -1,0 +1,7 @@
+apiVersion: etcd.oschina.cn/v1alpha1
+kind: EtcdCluster
+metadata:
+  name: etcdcluster-sample
+spec:
+  size: 3
+  image: cnych/etcd:v3.4.13
