@@ -9,6 +9,32 @@ rules:
 - apiGroups:
   - etcd.oschina.cn
   resources:
+  - etcdbackups
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - etcd.oschina.cn
+  resources:
+  - etcdbackups/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - etcd.oschina.cn
+  resources:
+  - etcdbackups/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - etcd.oschina.cn
+  resources:
   - etcdclusters
   verbs:
   - create
