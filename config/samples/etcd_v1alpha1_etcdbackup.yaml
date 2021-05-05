@@ -3,7 +3,7 @@ kind: EtcdBackup
 metadata:
   name: etcdbackup-sample
 spec:
-  endpoints: [<etcd-cluster-endpoints>]  # 备份的节点 etcd 地址
+  endpoints: "localhost:2379"  # 备份的节点 etcd 地址
   storageType: s3  # 指定备份类型
   backupImage: busybox:latest
   s3:

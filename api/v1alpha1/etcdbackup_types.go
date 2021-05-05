@@ -37,7 +37,7 @@ type EtcdBackupPhase string
 type EtcdBackupSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
-	Endpoints    []string          `json:"endpoints"`
+	Endpoints    string            `json:"endpoints"`
 	StorageType  BackupStorageType `json:"storageType"`
 	BackupSource `json:",inline"`
 	BackupImage  string `json:"backupImage"`

@@ -113,6 +113,10 @@ func podForBackup(backup *etcdv1alpha1.EtcdBackup) *corev1.Pod {
 				corev1.Container{
 					Name:  "etcd-backup",
 					Image: backup.Spec.BackupImage,
+					Args: []string{
+						"--etcd-endpoints", backup.Spec.Endpoints,
+						// TODO 其他参数
+					},
 					Resources: corev1.ResourceRequirements{
 						Requests: map[corev1.ResourceName]resource.Quantity{
 							corev1.ResourceCPU:    resource.MustParse("100m"),
